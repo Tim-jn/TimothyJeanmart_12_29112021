@@ -4,6 +4,8 @@ desktop
 
 */
 
+/* ===== dashboard ===== */
+
 .dashboard {
   display: flex;
 }
@@ -27,11 +29,28 @@ desktop
   position: absolute;
 }
 
+/* ===== bottomCharts ===== */
+
+.bottomCharts {
+    margin-top: 28px;
+    display: flex;
+    gap: 30px;
+}
+
 /* ===== lineChart ===== */
 
 .lineChart {
   background: #ff0000;
   height: 263px;
   width: 258px;
+  border-radius: 5px;
+}
+
+/* ===== radarChart ===== */
+
+.radarChart {
+  background: #282d30;
+  width: 258px;
+  height: 263px;
   border-radius: 5px;
 }

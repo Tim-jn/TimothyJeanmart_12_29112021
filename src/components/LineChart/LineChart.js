@@ -32,18 +32,17 @@ export default function RenderLineChart() {
     },
   ]
 
-  const renderBarChart = (
+  const renderLineChart = (
     <LineChart
       width={258}
       height={263}
       data={data}
       margin={{ top: 5, right: 30, left: 20, bottom: 5 }}
     >
-      <XAxis dataKey="day" axisLine={false} />
+      <XAxis dataKey="day" axisLine={false} stroke="#FFF" opacity="0.5" />
       <YAxis hide={true} domain={[-20, 60]} />
       <Tooltip />
       <Legend
-        width="147"
         align="left"
         verticalAlign="top"
         iconSize="0"
@@ -65,5 +64,5 @@ export default function RenderLineChart() {
       />
     </LineChart>
   )
-  return renderBarChart
+  return renderLineChart
 }
