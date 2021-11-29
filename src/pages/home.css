@@ -1,0 +1,37 @@
+/* 
+
+desktop 
+
+*/
+
+.dashboard {
+  display: flex;
+}
+
+.dashboardContent {
+  margin: 0 107px;
+  flex-direction: column;
+}
+
+/* ===== barchart ===== */
+
+.barChart {
+  position: relative;
+  background: #fbfbfb;
+  padding: 25px;
+  border-radius: 5px;
+}
+
+.barChart:before {
+  content: 'Activité quotidienne';
+  position: absolute;
+}
+
+/* ===== lineChart ===== */
+
+.lineChart {
+  background: #ff0000;
+  height: 263px;
+  width: 258px;
+  border-radius: 5px;
+}
