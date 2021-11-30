@@ -63,7 +63,7 @@ export default function RenderBarChart() {
     <ResponsiveContainer width="100%" height={272}>
       <BarChart data={data} barCategoryGap="27" barGap="8">
         <CartesianGrid strokeDasharray="3" vertical={false} />
-        <XAxis dataKey="day" />
+        <XAxis dataKey="day" tickMargin="15" />
         <YAxis
           orientation="right"
           axisLine={false}

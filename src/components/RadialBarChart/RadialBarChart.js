@@ -16,7 +16,7 @@ export default function RenderRadialBarChart() {
 
   return (
     <div className="radialBarChart">
-      <div className="radialBarChartScore">{data * 100}%</div>
+      <div className="radialBarChartScore">{12}%</div>
       <div className="radialBarChartScoreText">
         de votre<br></br>objectif
       </div>
@@ -40,6 +40,7 @@ export default function RenderRadialBarChart() {
             dataKey="todayScore"
             fill="#FF0000"
             background
+            cornerRadius={10}
           />
           <Tooltip />
           <text

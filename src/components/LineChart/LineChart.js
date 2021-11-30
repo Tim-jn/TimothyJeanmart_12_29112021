@@ -63,7 +63,15 @@ export default function RenderLineChart() {
           fontSize: '17px',
         }}
       />
-      <Tooltip content={<CustomTooltip sessionLength={10} />} />
+      <Tooltip
+        content={<CustomTooltip sessionLength={10} />}
+        cursor={{
+          stroke: 'black',
+          strokeOpacity: 0.1,
+          strokeWidth: 30,
+          fill: 'rgba(255, 255, 255, 0.1)',
+        }}
+      />
       <Line
         name="Durée moyenne des sessions"
         type="basis"
