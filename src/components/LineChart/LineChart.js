@@ -32,7 +32,7 @@ export default function RenderLineChart() {
     },
   ]
 
-  const renderLineChart = (
+  return (
     <LineChart
       width={258}
       height={263}
@@ -52,7 +52,12 @@ export default function RenderLineChart() {
           fontSize: '17px',
         }}
       />
-      <Tooltip />
+      <Tooltip
+        wrapperStyle={{
+          width: '39px',
+          height: '39px',
+        }}
+      />
       <Line
         name="Durée moyenne des sessions"
         type="basis"
@@ -64,5 +69,4 @@ export default function RenderLineChart() {
       />
     </LineChart>
   )
-  return renderLineChart
 }

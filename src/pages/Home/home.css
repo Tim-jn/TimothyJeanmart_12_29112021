@@ -11,7 +11,7 @@ desktop
 }
 
 .dashboardContent {
-  margin: 0 107px;
+  margin: auto;
   flex-direction: column;
 }
 

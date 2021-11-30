@@ -36,7 +36,7 @@ export default function RenderRadarChart() {
     },
   ]
 
-  const renderRadarChart = (
+  return (
     <ResponsiveContainer height="100%" width="100%">
       <RadarChart outerRadius={80} data={data}>
         <PolarGrid radialLines={false} />
@@ -47,5 +47,4 @@ export default function RenderRadarChart() {
       </RadarChart>
     </ResponsiveContainer>
   )
-  return renderRadarChart
 }
