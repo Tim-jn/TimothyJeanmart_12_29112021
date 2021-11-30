@@ -22,10 +22,25 @@ desktop
   margin-bottom: 90px;
 }
 
+@media (max-width: 1250px) {
+  .dashboardChartsAndBoxes {
+    display: flex;
+    flex-direction: column;
+  }
+}
+
+/* For macronutrients boxes style => go to components/MacronitrientsBox */
+
 /* ===== dashboardCharts =====*/
 
 .dashboardCharts {
   margin-right: 40px;
+}
+
+@media (max-width: 1250px) {
+  .dashboardCharts {
+    margin-right: 0;
+  }
 }
 
 /* ===== barchart ===== */
@@ -35,6 +50,8 @@ desktop
   background: #fbfbfb;
   padding: 25px;
   border-radius: 5px;
+  max-width: 835px;
+  margin: auto;
 }
 
 .barChart:before {
@@ -48,6 +65,13 @@ desktop
   margin-top: 28px;
   display: flex;
   justify-content: space-between;
+  width: 835px;
+}
+
+@media (max-width: 1250px) {
+  .bottomSmallCharts {
+    margin: 28px auto 0 auto;
+  }
 }
 
 /* ===== lineChart ===== */

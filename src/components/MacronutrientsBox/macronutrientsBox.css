@@ -1,3 +1,9 @@
+/*
+
+desktop
+
+*/
+
 .macronutrientBox {
   display: flex;
   background: #fbfbfb;
@@ -21,4 +27,20 @@
   font-size: 14px;
   color: #74798c;
   margin-top: 2px;
+}
+
+@media (max-width: 1250px) {
+  .macronutrientsBoxes {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    gap: 40px;
+    margin-top: 40px;
+    max-width: 835px;
+  }
+
+  .macronutrientBox {
+    margin: 0;
+  }
 }

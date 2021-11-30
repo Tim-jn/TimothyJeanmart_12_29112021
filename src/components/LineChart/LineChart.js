@@ -1,4 +1,5 @@
 import { LineChart, XAxis, YAxis, Legend, Line, Tooltip } from 'recharts'
+import CustomTooltip from './CustomTooltip'
 
 export default function RenderLineChart() {
   const data = [
@@ -32,6 +33,16 @@ export default function RenderLineChart() {
     },
   ]
 
+  for (let i = 0; i < data.length; i++) {
+    data[0].day = 'L'
+    data[1].day = 'M'
+    data[2].day = 'M'
+    data[3].day = 'J'
+    data[4].day = 'V'
+    data[5].day = 'S'
+    data[6].day = 'D'
+  }
+
   return (
     <LineChart
       width={258}
@@ -52,12 +63,7 @@ export default function RenderLineChart() {
           fontSize: '17px',
         }}
       />
-      <Tooltip
-        wrapperStyle={{
-          width: '39px',
-          height: '39px',
-        }}
-      />
+      <Tooltip content={<CustomTooltip sessionLength={10} />} />
       <Line
         name="Durée moyenne des sessions"
         type="basis"
