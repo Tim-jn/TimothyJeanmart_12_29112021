@@ -1,4 +1,4 @@
-import { LineChart, XAxis, YAxis, Tooltip, Legend, Line } from 'recharts'
+import { LineChart, XAxis, YAxis, Legend, Line } from 'recharts'
 
 export default function RenderLineChart() {
   const data = [
@@ -41,7 +41,6 @@ export default function RenderLineChart() {
     >
       <XAxis dataKey="day" axisLine={false} stroke="#FFF" opacity="0.5" />
       <YAxis hide={true} domain={[-20, 60]} />
-      <Tooltip />
       <Legend
         align="left"
         verticalAlign="top"

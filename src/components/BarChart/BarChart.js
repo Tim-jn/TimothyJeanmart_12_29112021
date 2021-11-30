@@ -6,7 +6,6 @@ import {
   Tooltip,
   Legend,
   Bar,
-  ResponsiveContainer,
 } from 'recharts'
 
 export default function RenderBarChart() {
@@ -49,8 +48,14 @@ export default function RenderBarChart() {
   ]
 
   const renderBarChart = (
-    <ResponsiveContainer height={320} width={835}>
-      <BarChart data={data} barCategoryGap="27" barGap="8" name="asdffd">
+      <BarChart
+        data={data}
+        barCategoryGap="27"
+        barGap="8"
+        name="asdffd"
+        height={270}
+        width={835}
+      >
         <CartesianGrid strokeDasharray="3" vertical={false} />
         <XAxis dataKey="day" />
         <YAxis
@@ -87,7 +92,6 @@ export default function RenderBarChart() {
           barSize={7}
         />
       </BarChart>
-    </ResponsiveContainer>
   )
   return renderBarChart
 }

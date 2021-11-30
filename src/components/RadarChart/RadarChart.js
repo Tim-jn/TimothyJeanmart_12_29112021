@@ -4,6 +4,7 @@ import {
   PolarAngleAxis,
   PolarRadiusAxis,
   Radar,
+  ResponsiveContainer,
 } from 'recharts'
 
 export default function RenderRadarChart() {
@@ -35,12 +36,14 @@ export default function RenderRadarChart() {
   ]
 
   const renderRadarChart = (
-    <RadarChart outerRadius={80} width={258} height={263} data={data}>
-      <PolarGrid radialLines={false} />
-      <PolarAngleAxis dataKey="kind" stroke="#FFF" fontSize="12px" />
-      <PolarRadiusAxis axisLine={false} tick={false} />
-      <Radar dataKey="value" fill="#FF0101B2" />
-    </RadarChart>
+    <ResponsiveContainer height="100%" width="100%">
+      <RadarChart outerRadius={80} data={data}>
+        <PolarGrid radialLines={false} />
+        <PolarAngleAxis dataKey="kind" stroke="#FFF" fontSize="12px" />
+        <PolarRadiusAxis axisLine={false} tick={false} />
+        <Radar dataKey="value" fill="#FF0101B2" />
+      </RadarChart>
+    </ResponsiveContainer>
   )
   return renderRadarChart
 }
