@@ -1,4 +1,4 @@
-import { LineChart, XAxis, YAxis, Legend, Line } from 'recharts'
+import { LineChart, XAxis, YAxis, Legend, Line, Tooltip } from 'recharts'
 
 export default function RenderLineChart() {
   const data = [
@@ -52,6 +52,7 @@ export default function RenderLineChart() {
           fontSize: '17px',
         }}
       />
+      <Tooltip />
       <Line
         name="Durée moyenne des sessions"
         type="basis"

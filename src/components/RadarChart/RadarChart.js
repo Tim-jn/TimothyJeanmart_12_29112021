@@ -5,6 +5,7 @@ import {
   PolarRadiusAxis,
   Radar,
   ResponsiveContainer,
+  Tooltip,
 } from 'recharts'
 
 export default function RenderRadarChart() {
@@ -41,6 +42,7 @@ export default function RenderRadarChart() {
         <PolarGrid radialLines={false} />
         <PolarAngleAxis dataKey="kind" stroke="#FFF" fontSize="12px" />
         <PolarRadiusAxis axisLine={false} tick={false} />
+        <Tooltip />
         <Radar dataKey="value" fill="#FF0101B2" />
       </RadarChart>
     </ResponsiveContainer>

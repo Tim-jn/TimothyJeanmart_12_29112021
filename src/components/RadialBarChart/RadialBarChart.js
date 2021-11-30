@@ -3,6 +3,7 @@ import {
   PolarAngleAxis,
   RadialBar,
   ResponsiveContainer,
+  Tooltip,
 } from 'recharts'
 import './radialBarChart.css'
 
@@ -40,7 +41,7 @@ export default function RenderRadialBarChart() {
             fill="#FF0000"
             background
           />
-
+          <Tooltip />
           <text
             x={50}
             y={35}
