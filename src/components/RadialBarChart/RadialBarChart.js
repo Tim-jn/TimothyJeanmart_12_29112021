@@ -7,16 +7,11 @@ import {
 } from 'recharts'
 import './radialBarChart.css'
 
-export default function RenderRadialBarChart() {
-  const data = [
-    {
-      todayScore: 12,
-    },
-  ]
-
+export default function RenderRadialBarChart(props) {
+  console.log(props.score)
   return (
     <div className="radialBarChart">
-      <div className="radialBarChartScore">{12}%</div>
+      <div className="radialBarChartScore">{props.score}%</div>
       <div className="radialBarChartScoreText">
         de votre<br></br>objectif
       </div>
@@ -25,7 +20,7 @@ export default function RenderRadialBarChart() {
         <RadialBarChart
           innerRadius={105}
           outerRadius={90}
-          data={data}
+          data={props.score && props.score}
           startAngle={-270}
           endAngle={90}
         >

@@ -7,7 +7,7 @@ export default function App() {
     <>
       <Router>
         <Routes>
-          <Route index element={<Home />} />
+          <Route path="/user/:id" element={<Home />} />
         </Routes>
       </Router>
     </>
