@@ -1,53 +1,22 @@
 import { LineChart, XAxis, YAxis, Legend, Line, Tooltip } from 'recharts'
 import CustomTooltip from './CustomTooltip'
 
-export default function RenderLineChart() {
-  const data = [
-    {
-      day: 1,
-      sessionLength: 30,
-    },
-    {
-      day: 2,
-      sessionLength: 23,
-    },
-    {
-      day: 3,
-      sessionLength: 45,
-    },
-    {
-      day: 4,
-      sessionLength: 50,
-    },
-    {
-      day: 5,
-      sessionLength: 0,
-    },
-    {
-      day: 6,
-      sessionLength: 0,
-    },
-    {
-      day: 7,
-      sessionLength: 60,
-    },
-  ]
-
-  for (let i = 0; i < data.length; i++) {
-    data[0].day = 'L'
-    data[1].day = 'M'
-    data[2].day = 'M'
-    data[3].day = 'J'
-    data[4].day = 'V'
-    data[5].day = 'S'
-    data[6].day = 'D'
+export default function RenderLineChart(props) {
+  for (let i = 0; i < props.session?.length; i++) {
+    props.session[0].day = 'L'
+    props.session[1].day = 'M'
+    props.session[2].day = 'M'
+    props.session[3].day = 'J'
+    props.session[4].day = 'V'
+    props.session[5].day = 'S'
+    props.session[6].day = 'D'
   }
 
   return (
     <LineChart
       width={258}
       height={263}
-      data={data}
+      data={props.session}
       margin={{ top: 5, right: 30, left: 20, bottom: 5 }}
     >
       <XAxis dataKey="day" axisLine={false} stroke="#FFF" opacity="0.5" />
@@ -64,7 +33,7 @@ export default function RenderLineChart() {
         }}
       />
       <Tooltip
-        content={<CustomTooltip sessionLength={10} />}
+        content={<CustomTooltip />}
         cursor={{
           stroke: 'black',
           strokeOpacity: 0.1,

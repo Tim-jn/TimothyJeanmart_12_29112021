@@ -33,7 +33,9 @@ export default function RenderBarChart(props) {
           domain={[0, 400]}
           ticks={[0, 200, 400]}
         />
-        <Tooltip content={<CustomTooltip kilogram={10} calories={200} />} />
+        <Tooltip
+          content={<CustomTooltip />}
+        />
         <Legend
           width="277"
           iconType="circle"

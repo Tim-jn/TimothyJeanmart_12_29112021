@@ -45,3 +45,23 @@ export function GetUsersActivity() {
 
   return data?.sessions
 }
+
+//  GetUsersAverageSession retrieves the average sessions of a user per day. The week starts on Monday.
+
+export function GetUsersAverageSession() {
+  const [data, setData] = useState()
+  const userId = parseInt(useParams().id)
+
+  useEffect(() => {
+    fetch(`http://localhost:3000/user/${userId}/average-sessions
+    `)
+      .then((res) => {
+        return res.json()
+      })
+      .then((obj) => {
+        setData(obj.data)
+      })
+  }, [userId])
+
+  return data?.sessions
+}
