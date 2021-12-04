@@ -10,58 +10,20 @@ import {
 } from 'recharts'
 import CustomTooltip from './CustomTooltip'
 
-export default function RenderBarChart() {
-  const data = [
-    {
-      day: '2020-07-01',
-      kilogram: 80,
-      calories: 240,
-    },
-    {
-      day: '2020-07-02',
-      kilogram: 80,
-      calories: 220,
-    },
-    {
-      day: '2020-07-03',
-      kilogram: 81,
-      calories: 280,
-    },
-    {
-      day: '2020-07-04',
-      kilogram: 81,
-      calories: 290,
-    },
-    {
-      day: '2020-07-05',
-      kilogram: 80,
-      calories: 160,
-    },
-    {
-      day: '2020-07-06',
-      kilogram: 78,
-      calories: 162,
-    },
-    {
-      day: '2020-07-07',
-      kilogram: 76,
-      calories: 390,
-    },
-  ]
-
-  for (let i = 0; i < data.length; i++) {
-    data[0].day = 1
-    data[1].day = 2
-    data[2].day = 3
-    data[3].day = 4
-    data[4].day = 5
-    data[5].day = 6
-    data[6].day = 7
+export default function RenderBarChart(props) {
+  for (let i = 0; i < props.activity?.length; i++) {
+    props.activity[0].day = 1
+    props.activity[1].day = 2
+    props.activity[2].day = 3
+    props.activity[3].day = 4
+    props.activity[4].day = 5
+    props.activity[5].day = 6
+    props.activity[6].day = 7
   }
 
   return (
     <ResponsiveContainer width="100%" height={272}>
-      <BarChart data={data} barCategoryGap="27" barGap="8">
+      <BarChart data={props.activity} barCategoryGap="27" barGap="8">
         <CartesianGrid strokeDasharray="3" vertical={false} />
         <XAxis dataKey="day" tickMargin="15" />
         <YAxis

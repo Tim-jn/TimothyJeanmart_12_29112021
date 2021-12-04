@@ -8,7 +8,6 @@ import {
 import './radialBarChart.css'
 
 export default function RenderRadialBarChart(props) {
-  console.log(props.score)
   return (
     <div className="radialBarChart">
       <div className="radialBarChartScore">{props.score}%</div>

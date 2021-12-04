@@ -16,12 +16,18 @@ import fatIcon from './Icons/fat-icon.svg'
 
 // Datas
 import GetUsersData from '../../data/Data'
+import { GetUsersActivity } from '../../data/Data'
 
 // Css
 import './home.css'
 
 export default function Home() {
-  const usersData = GetUsersData() // Includes id, user infos, score and keyData (macronutrients boxes)
+  // GetUsersData includes the user id, user information (first name, last name and age),
+  // the current day's score (todayScore) and key data (calorie, macronutrient, etc.).
+  const usersData = GetUsersData()
+
+  // GetUsersActivity retrieves a user's activity day by day with kilograms and calories.
+  const usersActivity = GetUsersActivity()
 
   return (
     <>
@@ -35,7 +41,7 @@ export default function Home() {
           <div className="dashboardChartsAndBoxes">
             <div className="dashboardCharts">
               <div className="barChart">
-                <RenderBarChart />
+                <RenderBarChart activity={usersActivity} />
               </div>
               <div className="bottomSmallCharts">
                 <div className="lineChart">
