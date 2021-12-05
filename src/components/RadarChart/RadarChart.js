@@ -21,7 +21,12 @@ export default function RenderRadarChart(props) {
     <ResponsiveContainer height="100%" width="100%">
       <RadarChart outerRadius={80} data={props.performance?.data}>
         <PolarGrid radialLines={false} />
-        <PolarAngleAxis dataKey="kind" stroke="#FFF" fontSize="12px" />
+        <PolarAngleAxis
+          dataKey="kind"
+          stroke="#FFF"
+          fontSize="12px"
+          tickLine={false}
+        />
         <PolarRadiusAxis axisLine={false} tick={false} />
         <Tooltip />
         <Radar dataKey="value" fill="#FF0101B2" />

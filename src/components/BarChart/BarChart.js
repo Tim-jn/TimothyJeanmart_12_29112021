@@ -25,17 +25,16 @@ export default function RenderBarChart(props) {
     <ResponsiveContainer width="100%" height={272}>
       <BarChart data={props.activity} barCategoryGap="27" barGap="8">
         <CartesianGrid strokeDasharray="3" vertical={false} />
-        <XAxis dataKey="day" tickMargin="15" />
+        <XAxis dataKey="day" tickMargin="15" tickLine={false} />
         <YAxis
           orientation="right"
           axisLine={false}
           tickMargin="30"
           domain={[0, 400]}
           ticks={[0, 200, 400]}
+          tickLine={false}
         />
-        <Tooltip
-          content={<CustomTooltip />}
-        />
+        <Tooltip content={<CustomTooltip />} />
         <Legend
           width="277"
           iconType="circle"

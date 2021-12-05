@@ -19,8 +19,14 @@ export default function RenderLineChart(props) {
       data={props.session}
       margin={{ top: 5, right: 30, left: 20, bottom: 5 }}
     >
-      <XAxis dataKey="day" axisLine={false} stroke="#FFF" opacity="0.5" />
-      <YAxis hide={true} domain={[-20, 60]} />
+      <XAxis
+        dataKey="day"
+        axisLine={false}
+        stroke="#FFF"
+        opacity="0.5"
+        tickLine={false}
+      />
+      <YAxis hide={true} domain={[-20, 60]} tickLine={false} />
       <Legend
         align="left"
         verticalAlign="top"
