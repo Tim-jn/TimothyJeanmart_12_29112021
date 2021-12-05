@@ -16,7 +16,11 @@ import fatIcon from './Icons/fat-icon.svg'
 
 // Datas
 import GetUsersData from '../../data/Data'
-import { GetUsersActivity, GetUsersAverageSession } from '../../data/Data'
+import {
+  GetUsersActivity,
+  GetUsersAverageSession,
+  GetUsersPerformances,
+} from '../../data/Data'
 
 // Css
 import './home.css'
@@ -32,7 +36,8 @@ export default function Home() {
   // GetUsersAverageSession retrieves the average sessions of a user per day. The week starts on Monday.
   const usersAverageSession = GetUsersAverageSession()
 
-  console.log(usersAverageSession)
+  // GetUsersPerformances retrieves a user's performance (energy, endurance, etc.).
+  const usersPerformances = GetUsersPerformances()
 
   return (
     <>
@@ -53,7 +58,7 @@ export default function Home() {
                   <RenderLineChart session={usersAverageSession} />
                 </div>
                 <div className="radarChart">
-                  <RenderRadarChart />
+                  <RenderRadarChart performance={usersPerformances} />
                 </div>
                 <div className="radialBarChart">
                   <RenderRadialBarChart

@@ -53,8 +53,7 @@ export function GetUsersAverageSession() {
   const userId = parseInt(useParams().id)
 
   useEffect(() => {
-    fetch(`http://localhost:3000/user/${userId}/average-sessions
-    `)
+    fetch(`http://localhost:3000/user/${userId}/average-sessions`)
       .then((res) => {
         return res.json()
       })
@@ -64,4 +63,23 @@ export function GetUsersAverageSession() {
   }, [userId])
 
   return data?.sessions
+}
+
+// GetUsersPerformances retrieves a user's performance (energy, endurance, etc.).
+
+export function GetUsersPerformances() {
+  const [data, setData] = useState()
+  const userId = parseInt(useParams().id)
+
+  useEffect(() => {
+    fetch(`http://localhost:3000/user/${userId}/performance`)
+      .then((res) => {
+        return res.json()
+      })
+      .then((obj) => {
+        setData(obj.data)
+      })
+  }, [userId])
+
+  return data
 }

@@ -8,37 +8,18 @@ import {
   Tooltip,
 } from 'recharts'
 
-export default function RenderRadarChart() {
-  const data = [
-    {
-      value: 90,
-      kind: 'intensity',
-    },
-    {
-      value: 200,
-      kind: 'speed',
-    },
-    {
-      value: 50,
-      kind: 'strength',
-    },
-    {
-      value: 140,
-      kind: 'endurance',
-    },
-    {
-      value: 120,
-      kind: 'energy',
-    },
-    {
-      value: 80,
-      kind: 'cardio',
-    },
-  ]
-
+export default function RenderRadarChart(props) {
+  for (let i = 0; i < props.performance?.length; i++) {
+    props.performance.data[0].kind = 'Cardio'
+    props.performance.data[1].kind = 'Energie'
+    props.performance.data[2].kind = 'Endurance'
+    props.performance.data[3].kind = 'Force'
+    props.performance.data[4].kind = 'Vitesse'
+    props.performance.data[5].kind = 'Intensité'
+  }
   return (
     <ResponsiveContainer height="100%" width="100%">
-      <RadarChart outerRadius={80} data={data}>
+      <RadarChart outerRadius={80} data={props.performance?.data}>
         <PolarGrid radialLines={false} />
         <PolarAngleAxis dataKey="kind" stroke="#FFF" fontSize="12px" />
         <PolarRadiusAxis axisLine={false} tick={false} />
