@@ -26,7 +26,7 @@ export default function RenderLineChart(props) {
         opacity="0.5"
         tickLine={false}
       />
-      <YAxis hide={true} domain={[-20, 60]} tickLine={false} />
+      <YAxis hide={true} domain={[0, 60]} tickLine={false} />
       <Legend
         align="left"
         verticalAlign="top"

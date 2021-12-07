@@ -8,8 +8,8 @@ export default function App() {
     <>
       <Router>
         <Routes>
-          <Route index element={<Index />} />
-          <Route path="/user/:id" element={<Home />} />
+          <Route exact path="/" element={<Index />} />
+          <Route exact path="/user/:id" element={<Home />} />
         </Routes>
       </Router>
     </>

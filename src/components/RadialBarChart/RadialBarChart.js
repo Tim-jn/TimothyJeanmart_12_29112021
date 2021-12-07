@@ -8,6 +8,12 @@ import {
 import './radialBarChart.css'
 
 export default function RenderRadialBarChart(props) {
+  const data = [
+    {
+      todayScore: props.score,
+    },
+  ]
+
   return (
     <div className="radialBarChart">
       <div className="radialBarChartScore">{props.score}%</div>
@@ -19,7 +25,7 @@ export default function RenderRadialBarChart(props) {
         <RadialBarChart
           innerRadius={105}
           outerRadius={90}
-          data={props.score && props.score}
+          data={data}
           startAngle={-270}
           endAngle={90}
         >
