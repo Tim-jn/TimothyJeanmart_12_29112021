@@ -2,6 +2,11 @@ import { Link } from 'react-router-dom'
 import logo from './logo.svg'
 import './header.css'
 
+/**
+ * A header with the company logo and a navigation bar
+ * @returns { HTMLElement }
+ */
+
 export default function Header() {
   return (
     <>

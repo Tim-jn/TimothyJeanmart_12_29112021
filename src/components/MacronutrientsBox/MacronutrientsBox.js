@@ -1,5 +1,11 @@
 import './macronutrientsBox.css'
 
+/**
+ * A small card/box that shows the user's macronutrients
+ * @param {*} props
+ * @returns { HTMLElement }
+ */
+
 export default function MacronutrientsBox(props) {
   return (
     <div className="macronutrientBox">

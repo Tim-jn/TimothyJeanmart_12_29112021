@@ -1,14 +1,13 @@
 import { useState, useEffect } from 'react'
 import { useParams } from 'react-router'
 
-/*
+// Fetch datas from backend NodeJS
 
-Fetch datas from backend NodeJS
-
-*/
-
-// GetUsersData includes the user id, user information (first name, last name and age),
-// the current day's score (todayScore) and key data (calorie, macronutrient, etc.).
+/**
+ * GetUsersData includes the user id, user information (first name, last name and age),
+ * the current day's score (todayScore) and key data (calorie, macronutrient, etc.).
+ * @returns { object }
+ */
 
 export default function GetUsersData() {
   const [data, setData] = useState()
@@ -27,7 +26,10 @@ export default function GetUsersData() {
   return data
 }
 
-// GetUsersActivity retrieves a user's activity day by day with kilograms and calories.
+/**
+ * GetUsersActivity retrieves a user's activity day by day with kilograms and calories.
+ * @returns { Array }
+ */
 
 export function GetUsersActivity() {
   const [data, setData] = useState()
@@ -46,7 +48,10 @@ export function GetUsersActivity() {
   return data?.sessions
 }
 
-//  GetUsersAverageSession retrieves the average sessions of a user per day. The week starts on Monday.
+/**
+ * GetUsersAverageSession retrieves the average sessions of a user per day. The week starts on Monday.
+ * @returns { Array }
+ */
 
 export function GetUsersAverageSession() {
   const [data, setData] = useState()
@@ -65,7 +70,10 @@ export function GetUsersAverageSession() {
   return data?.sessions
 }
 
-// GetUsersPerformances retrieves a user's performance (energy, endurance, etc.).
+/**
+ * GetUsersPerformances retrieves a user's performance (energy, endurance, etc.).
+ * @returns { object }
+ */
 
 export function GetUsersPerformances() {
   const [data, setData] = useState()

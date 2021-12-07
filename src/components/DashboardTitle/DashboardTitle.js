@@ -1,5 +1,11 @@
 import './dashboardTitle.css'
 
+/**
+ * A small welcome section with the name that changes dynamically depending on the user
+ * @param {*} props
+ * @returns { HTMLElement }
+ */
+
 export default function DashboardTitle(props) {
   return (
     <div className="dashboardTitle">

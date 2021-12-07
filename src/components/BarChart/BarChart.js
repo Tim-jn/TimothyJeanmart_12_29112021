@@ -10,7 +10,13 @@ import {
 } from 'recharts'
 import CustomTooltip from './CustomTooltip'
 
+/**
+ * A bar chart showing user activity, builded with recharts.
+ * @param {*} props
+ */
+
 export default function RenderBarChart(props) {
+  // The loop changes the dates in numbers to match with the figma model
   for (let i = 0; i < props.activity?.length; i++) {
     props.activity[0].day = 1
     props.activity[1].day = 2

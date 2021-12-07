@@ -7,9 +7,15 @@ import {
   ResponsiveContainer,
 } from 'recharts'
 
+/**
+ *  * A radar chart showing user's performances, builded with recharts.
+ * @param {*} props
+ */
+
 export default function RenderRadarChart(props) {
   const performance = props.performance?.data
 
+  // The loop changes the numbers to their corresponding performance, according to the figma model
   for (let i = 0; i < performance?.length; i++) {
     performance[0].kind = 'Intensité'
     performance[1].kind = 'Vitesse'

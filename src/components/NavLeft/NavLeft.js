@@ -5,6 +5,11 @@ import icon3 from './icon3.svg'
 import icon4 from './icon4.svg'
 import './navLeft.css'
 
+/**
+ * A side navigation's bar with a copyright of the company
+ * @returns { HTMLElement }
+ */
+
 export default function Header() {
   return (
     <section className="navLeft">

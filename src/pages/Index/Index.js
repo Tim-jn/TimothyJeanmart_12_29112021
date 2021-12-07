@@ -2,6 +2,11 @@ import { Link } from 'react-router-dom'
 import Header from '../../components/Header/Header'
 import './index.css'
 
+/**
+ * Provisional index page for ease of navigation
+ * @returns { HTMLElement }
+ */
+
 export default function Index() {
   return (
     <>

@@ -25,6 +25,11 @@ import {
 // Css
 import './home.css'
 
+/**
+ * function Home build the main page
+ * @returns { HTMLElement }
+ */
+
 export default function Home() {
   // GetUsersData includes the user id, user information (first name, last name and age),
   // the current day's score (todayScore) and key data (calorie, macronutrient, etc.).
@@ -62,6 +67,8 @@ export default function Home() {
                 </div>
                 <div className="radialBarChart">
                   <RenderRadialBarChart
+                    // Backend have 2 differents names for similar data
+                    // score check both and multiply them by 100 to have percents on 100
                     score={(usersData?.todayScore || usersData?.score) * 100}
                   />
                 </div>

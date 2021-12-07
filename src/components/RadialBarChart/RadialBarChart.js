@@ -7,7 +7,13 @@ import {
 } from 'recharts'
 import './radialBarChart.css'
 
+/**
+ *  * A radial bar chart showing user's score of the day, builded with recharts.
+ * @param {*} props
+ */
+
 export default function RenderRadialBarChart(props) {
+  // data build a new array with the score to match with recharts data's syntax
   const data = [
     {
       todayScore: props.score,
