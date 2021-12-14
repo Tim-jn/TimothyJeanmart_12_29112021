@@ -1,9 +1,10 @@
+import { useState } from 'react'
+import { useEffect } from 'react/cjs/react.development'
 import {
   RadialBarChart,
   PolarAngleAxis,
   RadialBar,
   ResponsiveContainer,
-  Tooltip,
 } from 'recharts'
 import './radialBarChart.css'
 
@@ -14,11 +15,11 @@ import './radialBarChart.css'
 
 export default function RenderRadialBarChart(props) {
   // data build a new array with the score to match with recharts data's syntax
-  const data = [
-    {
-      todayScore: props.score,
-    },
-  ]
+  const [data, setData] = useState([props.score])
+
+  useEffect(() => {
+    setData([{ score: props.score }])
+  }, [props.score])
 
   return (
     <div className="radialBarChart">
@@ -43,12 +44,11 @@ export default function RenderRadialBarChart(props) {
           />
           <RadialBar
             clockWise={false}
-            dataKey="todayScore"
+            dataKey="score"
             fill="#FF0000"
             background
             cornerRadius={10}
           />
-          <Tooltip />
           <text
             x={50}
             y={35}

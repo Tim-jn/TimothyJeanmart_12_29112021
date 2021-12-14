@@ -25,6 +25,8 @@ export default function RenderRadarChart(props) {
     performance[5].kind = 'Cardio'
   }
 
+  // performance.kind = kind[data[i].kind]
+
   return (
     <ResponsiveContainer height="100%" width="100%">
       <RadarChart outerRadius={80} data={performance}>
@@ -36,10 +38,8 @@ export default function RenderRadarChart(props) {
           dataKey="kind"
           dy={4}
         />
-        <PolarRadiusAxis axisLine={false} tick={false} />
+        <PolarRadiusAxis axisLine={false} tick={false} domain={[0, 200]} />
         <Radar fill="#FF0101B2" dataKey="value" />
-        <text>Intensité</text>
-        <text></text>
       </RadarChart>
     </ResponsiveContainer>
   )
