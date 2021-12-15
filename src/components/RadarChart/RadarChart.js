@@ -27,15 +27,20 @@ export default function RenderRadarChart(props) {
   // performance.kind[] = performance?.data[i].kind
   // }
 
-  for (let i = 0; i < performance?.length; i++) {
-    performance[0].kind = 'Intensité'
-    performance[1].kind = 'Vitesse'
-    performance[2].kind = 'Force'
-    performance[3].kind = 'Endurance'
-    performance[4].kind = 'Energie'
-    performance[5].kind = 'Cardio'
-  }
+  // let kindArray = [
+  //   'Intensité',
+  //   'Vitesse',
+  //   'Force',
+  //   'Endurance',
+  //   'Energie',
+  //   'Cardio',
+  // ]
 
+  // for (let i = 0; i < performance?.length; i++) {
+  //   performance[i].kind = kindArray
+  // }
+
+  console.log(performance)
   // performance.kind = kind[data[i].kind]
 
   return (

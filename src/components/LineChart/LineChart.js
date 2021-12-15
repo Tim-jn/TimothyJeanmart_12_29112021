@@ -1,6 +1,7 @@
 import { LineChart, XAxis, YAxis, Legend, Line, Tooltip } from 'recharts'
 import CustomTooltip from './CustomTooltip'
 import PropTypes from 'prop-types'
+import { useState, useEffect } from 'react'
 
 /**
  * A line chart showing user's average session, builded with recharts.
@@ -9,22 +10,22 @@ import PropTypes from 'prop-types'
  */
 
 export default function RenderLineChart(props) {
+  const [data, setData] = useState()
+
+  useEffect(() => {
+    setData(props.session)
+  }, [props.session])
+
   // The loop changes the dates in days of week to match with the figma model
-  for (let i = 0; i < props.session?.length; i++) {
-    props.session[0].day = 'L'
-    props.session[1].day = 'M'
-    props.session[2].day = 'M'
-    props.session[3].day = 'J'
-    props.session[4].day = 'V'
-    props.session[5].day = 'S'
-    props.session[6].day = 'D'
+  for (let i = 0; i < data?.length; i++) {
+    data[i].day = ['L', 'M', 'M', 'J', 'V', 'S', 'D']
   }
 
   return (
     <LineChart
       width={258}
       height={263}
-      data={props.session}
+      data={data}
       margin={{ top: 0, right: 20, left: 20, bottom: 5 }}
     >
       <XAxis

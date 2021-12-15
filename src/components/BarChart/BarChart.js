@@ -27,13 +27,7 @@ export default function RenderBarChart(props) {
 
   // The loop changes the dates in numbers to match with the figma model
   for (let i = 0; i < data?.length; i++) {
-    data[0].day = 1
-    data[1].day = 2
-    data[2].day = 3
-    data[3].day = 4
-    data[4].day = 5
-    data[5].day = 6
-    data[6].day = 7
+    data[i].day = [1, 2, 3, 4, 5, 6, 7]
   }
 
   return (
