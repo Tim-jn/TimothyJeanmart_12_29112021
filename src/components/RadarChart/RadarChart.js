@@ -17,31 +17,18 @@ import PropTypes from 'prop-types'
 
 export default function RenderRadarChart(props) {
   const [performance, setPerformance] = useState()
+  const [kind, setKind] = useState()
 
   useEffect(() => {
     setPerformance(props.performance?.data)
-  }, [props.performance?.data])
+    setKind(props.performance?.kind)
+  }, [props.performance])
 
   // The loop changes the numbers to their corresponding performance, according to the figma model
-  // for (let i = 0; i < performance?.length; i++) {
-  // performance.kind[] = performance?.data[i].kind
-  // }
-
-  // let kindArray = [
-  //   'Intensité',
-  //   'Vitesse',
-  //   'Force',
-  //   'Endurance',
-  //   'Energie',
-  //   'Cardio',
-  // ]
-
-  // for (let i = 0; i < performance?.length; i++) {
-  //   performance[i].kind = kindArray
-  // }
-
-  console.log(performance)
-  // performance.kind = kind[data[i].kind]
+  for (let i = 0; i < performance?.length; i++) {
+    performance[i].kind =
+      kind[i + 1].charAt(0).toUpperCase() + kind[i + 1].slice(1) // put captial on first letter
+  }
 
   return (
     <ResponsiveContainer height="100%" width="100%">
@@ -49,10 +36,10 @@ export default function RenderRadarChart(props) {
         <PolarGrid radialLines={false} />
         <PolarAngleAxis
           stroke="#FFF"
-          fontSize="12px"
+          fontSize="10px"
           tickLine={false}
           dataKey="kind"
-          dy={4}
+          dy={2.5}
         />
         <PolarRadiusAxis axisLine={false} tick={false} domain={[0, 200]} />
         <Radar fill="#FF0101B2" dataKey="value" />
