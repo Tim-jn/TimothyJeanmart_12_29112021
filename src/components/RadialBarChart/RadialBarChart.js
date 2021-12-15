@@ -7,15 +7,17 @@ import {
   ResponsiveContainer,
 } from 'recharts'
 import './radialBarChart.css'
+import PropTypes from 'prop-types'
 
 /**
  *  * A radial bar chart showing user's score of the day, builded with recharts.
+ * @Component
  * @param {*} props
  */
 
 export default function RenderRadialBarChart(props) {
   // data build a new array with the score to match with recharts data's syntax
-  const [data, setData] = useState([props.score])
+  const [data, setData] = useState()
 
   useEffect(() => {
     setData([{ score: props.score }])
@@ -62,4 +64,8 @@ export default function RenderRadialBarChart(props) {
       </ResponsiveContainer>
     </div>
   )
+}
+
+RenderRadialBarChart.propTypes = {
+  score: PropTypes.number,
 }

@@ -1,8 +1,10 @@
 import { LineChart, XAxis, YAxis, Legend, Line, Tooltip } from 'recharts'
 import CustomTooltip from './CustomTooltip'
+import PropTypes from 'prop-types'
 
 /**
  * A line chart showing user's average session, builded with recharts.
+ * @Component
  * @param {*} props
  */
 
@@ -23,7 +25,7 @@ export default function RenderLineChart(props) {
       width={258}
       height={263}
       data={props.session}
-      margin={{ top: 5, right: 30, left: 20, bottom: 5 }}
+      margin={{ top: 0, right: 20, left: 20, bottom: 5 }}
     >
       <XAxis
         dataKey="day"
@@ -31,14 +33,20 @@ export default function RenderLineChart(props) {
         stroke="#FFF"
         opacity="0.5"
         tickLine={false}
+        type="category"
       />
-      <YAxis hide={true} domain={[0, 60]} tickLine={false} />
+      <YAxis
+        hide={true}
+        domain={['dataMin -3', 'dataMax']}
+        tickLine={false}
+        type="number"
+      />
       <Legend
         align="left"
         verticalAlign="top"
         iconSize="0"
         wrapperStyle={{
-          padding: '29px 0 0 10px',
+          padding: '29px 0 10px 10px',
           opacity: '50%',
           lineHeight: '24px',
           fontSize: '17px',
@@ -55,7 +63,7 @@ export default function RenderLineChart(props) {
       />
       <Line
         name="Durée moyenne des sessions"
-        type="basis"
+        type="monotone"
         dataKey="sessionLength"
         stroke="#FFF"
         dot={false}
@@ -64,4 +72,8 @@ export default function RenderLineChart(props) {
       />
     </LineChart>
   )
+}
+
+RenderLineChart.propTypes = {
+  session: PropTypes.array,
 }

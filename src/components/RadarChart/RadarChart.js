@@ -6,16 +6,27 @@ import {
   Radar,
   ResponsiveContainer,
 } from 'recharts'
+import { useState, useEffect } from 'react'
+import PropTypes from 'prop-types'
 
 /**
  *  * A radar chart showing user's performances, builded with recharts.
+ * @Component
  * @param {*} props
  */
 
 export default function RenderRadarChart(props) {
-  const performance = props.performance?.data
+  const [performance, setPerformance] = useState()
+
+  useEffect(() => {
+    setPerformance(props.performance?.data)
+  }, [props.performance?.data])
 
   // The loop changes the numbers to their corresponding performance, according to the figma model
+  // for (let i = 0; i < performance?.length; i++) {
+  // performance.kind[] = performance?.data[i].kind
+  // }
+
   for (let i = 0; i < performance?.length; i++) {
     performance[0].kind = 'Intensité'
     performance[1].kind = 'Vitesse'
@@ -43,4 +54,8 @@ export default function RenderRadarChart(props) {
       </RadarChart>
     </ResponsiveContainer>
   )
+}
+
+RenderRadarChart.propTypes = {
+  performance: PropTypes.object,
 }

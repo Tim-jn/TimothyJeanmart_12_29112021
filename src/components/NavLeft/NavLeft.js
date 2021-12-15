@@ -7,6 +7,7 @@ import './navLeft.css'
 
 /**
  * A side navigation's bar with a copyright of the company
+ * @Component
  * @returns { HTMLElement }
  */
 

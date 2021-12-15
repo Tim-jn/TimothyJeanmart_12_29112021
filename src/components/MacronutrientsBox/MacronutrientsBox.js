@@ -1,7 +1,9 @@
 import './macronutrientsBox.css'
+import PropTypes from 'prop-types'
 
 /**
  * A small card/box that shows the user's macronutrients
+ * @Component
  * @param {*} props
  * @returns { HTMLElement }
  */
@@ -16,4 +18,10 @@ export default function MacronutrientsBox(props) {
       </div>
     </div>
   )
+}
+
+MacronutrientsBox.propTypes = {
+  image: PropTypes.string,
+  macroCount: PropTypes.number,
+  macroName: PropTypes.string,
 }

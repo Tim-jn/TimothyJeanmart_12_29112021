@@ -1,7 +1,9 @@
 import './dashboardTitle.css'
+import PropTypes from 'prop-types'
 
 /**
  * A small welcome section with the name that changes dynamically depending on the user
+ * @Component
  * @param {*} props
  * @returns { HTMLElement }
  */
@@ -17,4 +19,8 @@ export default function DashboardTitle(props) {
       </h2>
     </div>
   )
+}
+
+DashboardTitle.propTypes = {
+  userName: PropTypes.string,
 }

@@ -4,6 +4,7 @@ import './header.css'
 
 /**
  * A header with the company logo and a navigation bar
+ * @Component
  * @returns { HTMLElement }
  */
 
