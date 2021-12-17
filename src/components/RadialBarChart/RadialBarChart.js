@@ -48,7 +48,6 @@ export default function RenderRadialBarChart(props) {
             clockWise={false}
             dataKey="score"
             fill="#FF0000"
-            background
             cornerRadius={10}
           />
           <text

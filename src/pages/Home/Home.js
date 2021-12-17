@@ -60,7 +60,9 @@ export default function Home() {
               </div>
               <div className="bottomSmallCharts">
                 <div className="lineChart">
-                  <RenderLineChart session={usersAverageSession} />
+                  <div className="background">
+                    <RenderLineChart session={usersAverageSession} />
+                  </div>
                 </div>
                 <div className="radarChart">
                   <RenderRadarChart performance={usersPerformances} />

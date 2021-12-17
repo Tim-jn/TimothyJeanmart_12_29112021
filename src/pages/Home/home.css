@@ -78,9 +78,29 @@ desktop
 
 .lineChart {
   background: #ff0000;
-  height: 263px;
-  width: 258px;
   border-radius: 5px;
+  position: relative;
+}
+
+.lineChart::before {
+  content: 'Durée moyenne des sessions';
+  position: absolute;
+  color: #fff;
+  margin: 29px 0 0 29px;
+  line-height: 27px;
+  width: 200px;
+  opacity: 0.5;
+}
+
+.background::before {
+  position: absolute;
+  right: 0;
+  content: '';
+  border-radius: 0 5px 5px 0;
+  background: #000000;
+  opacity: 0.1;
+  width: 28%;
+  height: 100%;
 }
 
 /* ===== radarChart ===== */
@@ -99,4 +119,25 @@ desktop
   width: 258px;
   height: 263px;
   border-radius: 5px;
+  position: relative;
+}
+
+.radialBarChartScore {
+  z-index: 3;
+}
+
+.radialBarChartScoreText {
+  z-index: 3;
+}
+
+.radialBarChart::before {
+  position: absolute;
+  right: 18%;
+  top: 18%;
+  content: '';
+  border-radius: 50%;
+  background: #fff;
+  width: 64%;
+  z-index: 2;
+  height: 64%;
 }
