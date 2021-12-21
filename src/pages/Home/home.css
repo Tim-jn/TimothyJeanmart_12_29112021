@@ -103,6 +103,18 @@ desktop
   height: 100%;
 }
 
+.days {
+  position: absolute;
+  bottom: 16px;
+}
+
+.days span {
+  font-size: 12px;
+  color: #fff;
+  opacity: 0.5;
+  margin: 14.3px;
+}
+
 /* ===== radarChart ===== */
 
 .radarChart {
