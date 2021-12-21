@@ -8,9 +8,11 @@ SportSee is project 12 of the Front-end course of **OpenClassrooms**. It's a web
 
 ## Setup
 
-This project requires the use of a NodeJS backend : [SportSee backend](https://github.com/Tim-jn/P12_Backend).
+This project was builded with Node v17.3.0 and VSCode as code editor.
 
-Follow the readme to install the backend.
+It requires the use of a NodeJS backend : [SportSee backend](https://github.com/Tim-jn/P12_Backend).
+
+Follow the backend readme for its installation.
 
 To launch the project :
 
