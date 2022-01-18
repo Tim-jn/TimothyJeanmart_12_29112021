@@ -19,7 +19,7 @@ Développez un tableau de bord d'analytics avec React
 - Développer des éléments graphiques avancés à l'aide de bibliothèques JavaScript
 - Produire de la documentation technique pour une application
 
-## Maquettes
+## Screenshots
 &nbsp;
 ![maquette](https://user-images.githubusercontent.com/82055836/149948772-18b1c323-ccf9-406b-bb9e-44639b104b4b.png)
 &nbsp;
