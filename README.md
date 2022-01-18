@@ -6,6 +6,9 @@
 
 SportSee is project 12 of the Front-end course of **OpenClassrooms**. It's a web application for sports monitoring.
 
+![maquette](https://user-images.githubusercontent.com/82055836/149948772-18b1c323-ccf9-406b-bb9e-44639b104b4b.png)
+![maquette2](https://user-images.githubusercontent.com/82055836/149948802-83405309-04fd-4ff3-bae8-fc69c0304126.png)
+
 ## Setup
 
 This project was builded with Node v17.3.0 and VSCode as code editor.
