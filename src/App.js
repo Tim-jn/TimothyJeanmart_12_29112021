@@ -7,8 +7,9 @@ export default function App() {
     <>
       <Router>
         <Routes>
-          <Route index element={<Index />} />
-          <Route path="/user/:id" element={<Home />} />
+       // <Route index element={<Index />} />
+          // changed path="/user/:id" of Home element for live demo 
+          <Route path="/" element={<Home />} />
         </Routes>
       </Router>
     </>
