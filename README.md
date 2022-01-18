@@ -3,7 +3,8 @@
 ## [Installation](#Setup)
 
 Ce projet nécéssite l'utilisation d'un back-end. 
-Aucune version live n'est disponible en ligne, mais vous pouvez suivre les étapes d'installation afin d'en obtenir une localement.
+Aucune version live n'est disponible en ligne, 
+mais vous pouvez suivre les étapes d'installation afin d'en obtenir une localement.
 
 ## Intitulé du projet
 Développez un tableau de bord d'analytics avec React
