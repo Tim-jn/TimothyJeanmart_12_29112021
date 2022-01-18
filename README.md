@@ -1,6 +1,6 @@
 # Sportsee
 
-[Installation](#Setup)
+## [Installation](#Setup)
 
 ## Intitulé du projet
 Développez un tableau de bord d'analytics avec React
