@@ -1,6 +1,6 @@
 # Projet 12 : Développez un tableau de bord d'analytics avec React
 
-[![Generic badge](https://img.shields.io/badge/Made%20with-React-red)](https://fr.reactjs.org/) [![Generic badge](https://img.shields.io/badge/Made%20with-Recharts-red)](https://recharts.org/en-US/)
+[![Generic badge](https://img.shields.io/badge/Made%20with-React-red)](https://fr.reactjs.org/)   [![Generic badge](https://img.shields.io/badge/Made%20with-Recharts-red)](https://recharts.org/en-US/)
 
 SportSee is project 12 of the Front-end course of **OpenClassrooms**. It's a web application for sports monitoring.
 
